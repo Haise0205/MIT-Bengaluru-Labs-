@@ -1,0 +1,21 @@
+//int to byte, char to int, double to byte, double to int 
+package manipal;
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int intValue = input.nextInt();
+        System.out.print("Enter a double: ");
+        double doubleValue = input.nextDouble(); 
+        System.out.print("Enter a character: ");
+        char charValue = input.next().charAt(0);
+        
+        System.out.println("Conversions:");
+        System.out.println("int to byte: " + (byte)intValue);
+        System.out.println("char to int: " + (int)charValue);
+        System.out.println("double to byte: " + (byte)doubleValue);
+        System.out.println("double to int: " + (int)doubleValue);
+    }
+}

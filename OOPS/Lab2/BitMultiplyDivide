@@ -1,0 +1,18 @@
+//Multiply and divide a number by 2 using bitwise operator
+package manipal;
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter a number ot multiply using bitwise operator: ");
+		int num = input.nextInt();
+		System.out.println("The entered number is: " +num);
+		//To multiply a number using bitwise operator shift the bits to right by 1 place 
+		num= num <<1;
+		System.out.println("The Multiplied number is: " +num);
+		//To Divide a number using bitwise operator shift the bits to left by 1 place 
+		num= num >> 2;
+		System.out.println("The Divided number is: " +num);
+    }
+}

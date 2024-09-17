@@ -1,0 +1,41 @@
+package manipal;
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the lower limit (n): ");
+        int n = scanner.nextInt();
+
+        System.out.print("Enter the upper limit (m): ");
+        int m = scanner.nextInt();
+
+        if (n <= 1) {
+            System.out.println("The lower limit must be greater than 1.");
+        } else {
+            System.out.println("Prime numbers between " + n + " and " + m + ":");
+            for (int i = n; i <= m; i++) {
+                if (isPrime(i)) {
+                    System.out.print(i + " ");
+                }
+            }
+        }
+
+        scanner.close();
+    }
+
+    private static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i<= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+
+	}	
+}
